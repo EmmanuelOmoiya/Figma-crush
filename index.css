@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+header{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2{
+    margin-left: 80px;
+    color: #fff;
+    cursor: pointer;
+}
+
+span{
+    color: #10ad64;
+}
+
+.container{
+    background-color: rgb(44, 43, 54);
+    margin: 0;
+    height: 400px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 120px;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+a:hover{
+    color: #10ad64;
+}
+
+.content-h{
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+}
+
+h1{
+    font-size: 60px;
+    margin-bottom: 4px;
+}
+
+hr{
+    width: 44%;
+    border: none;
+    background-color: #fff;
+    height: 1px;
+    display: flex;
+    justify-content: center;
+    margin-left: 28%;
+    margin-right: 25%;
+}
+
+.space{
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 9%;
+    padding-right: 10%;
+}
+
+img{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.grid-1{
+    width: 300px;
+    margin: 30px;
+    border-radius: 7px;
+    transition: .5s;
+}
+
+.grid-1:hover{
+    transform: scale(1.1);
+}
+
+p{
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+i{
+    color: #fff;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+
+.fa-search{
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.fa-twitter:hover{
+    color: #10ad64;
+}
+
+.grid-1 .grid-2{
+    opacity: 1;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer a{
+    color: #000;
+    margin-left: 0;
+}
+
+input{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+}
+
+/*.bar{
+    display: none;
+    width: 25px;
+    height: 3px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+*/
+
+@media screen and (max-width: 500px){
+    .hamburger{
+        display: block;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    .free{
+        margin-top: 4px;
+        background-color: #fff;
+        border-radius: 3px;
+        height: 4px;
+        width: 25px;
+        padding: 0;
+    }
+
+    h2{
+        margin: 0;
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    .space{
+        font-size: 10px;
+    }
+
+    .grid{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .grid-1{
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    img{
+        width: 350px;
+    }
+
+    .content-h{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .bar{
+        width: 25px;
+        height: 3px;
+        left: 70%;
+        color: #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+    }
+
+   .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    
+    .hamburger.active .free:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .free:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: .5s;
+    }
+
+    .hamburger.active .free:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: .5s;
+    }
+
+    .hamburger.active {
+        position: fixed;
+        margin-left: -29px;
+    }
+
+    .hamburger.active .body{
+        overflow: hidden;
+    }
+
+   .menu{
+       display: block;
+        position: fixed;
+        left: -110%;
+        top: 0rem;
+        flex-direction: column;
+        background-color: rgb(44, 43, 54);
+        width: 93%;
+        text-align: center;
+        transition: 0.5s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0);
+        height: 100%;
+        padding-top: 40px;
+        justify-content: center;
+    }
+
+    body .menu.active{
+        left: 0;
+        overflow-y: hidden;
+    }
+
+    li{
+        margin: 2.5rem 0;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .menu{
+        display: none;
+    }
+
+    h2{
+        margin: 0;
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    .space{
+        font-size: 10px;
+    }
+
+    .grid{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .grid-1{
+        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content-h{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hamburger{
+        display: block;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .hamburger.active {
+        position: fixed;
+        margin-left: -29px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    .free{
+        margin-top: 4px;
+        background-color: #fff;
+        border-radius: 3px;
+        height: 4px;
+        width: 25px;
+        padding: 0;
+    }
+
+    .hamburger.active .free:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .free:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: .5s;
+    }
+
+    .hamburger.active .free:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: .5s;
+    }
+    .menu{
+        display: block;
+         position: fixed;
+         left: -110%;
+         top: 0rem;
+         flex-direction: column;
+         background-color: rgb(44, 43, 54);
+         width: 93%;
+         text-align: center;
+         transition: 0.5s;
+         box-shadow: 0 10px 27px rgba(0, 0, 0, 0);
+         height: 100%;
+         padding-top: 40px;
+         justify-content: center;
+    }
+    
+    .menu.active{
+        left: 0;
+    }
+
+    li{
+        margin: 2.5rem 0;
+    }
+}
